@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keer</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(45deg, #ff6b6b, #f06595);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(45deg, #f06595, #ff6b6b);
+            transform: scale(1.1);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <div>        <h1>Tunisie On Night</h1>
+        Beta 1.0
+        <p>Apk</p>
+        <button onclick="window.location.href='https://www.dropbox.com/scl/fi/rbbdi7mwh4eversnx0igi/Tunisie-On-Night.apk?rlkey=3gk84p9i3kb7y0rymjvp4hbmb&st=rrxne8fa&dl=0'">Download</button>
+    </div>
+
+    <script>
+        let red = Math.random() * 256;
+        let green = Math.random() * 256;
+        let blue = Math.random() * 256;
+        const changeSpeed = 1; // Speed of color transition
+
+        const changeBackgroundColor = () => {
+            red = (red + Math.random() * changeSpeed) % 256;
+            green = (green + Math.random() * changeSpeed) % 256;
+            blue = (blue + Math.random() * changeSpeed) % 256;
+            document.body.style.backgroundColor = `rgb(${Math.floor(red)}, ${Math.floor(green)}, ${Math.floor(blue)})`;
+            requestAnimationFrame(changeBackgroundColor);
+        };
+
+        changeBackgroundColor(); // Start the animation
+    </script>
+</body>
+</html>
+
+<button onclick="window.location.href='index.html'">Back</button>
