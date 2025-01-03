@@ -3,94 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Keer Games</title>
+  <title>jaballah family</title>
   <style>
-    /* General Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    /* Body styling with RGB background */
     body {
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      margin: 0;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      color: white;
+      background: rgb(255, 0, 0); /* Starting red color */
+      transition: background 1s ease;
+      font-family: Arial, sans-serif;
     }
 
-    .login-container {
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 15px;
-      padding: 30px;
-      width: 350px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-      backdrop-filter: blur(8px);
-      text-align: center;
-    }
-
-    .login-container h2 {
-      margin-bottom: 20px;
-      font-size: 28px;
-      color: #fff;
-    }
-
-    .login-container input {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
+    /* Button styling */
+    .navigate-button {
+      padding: 20px 40px;
+      font-size: 22px;
       border: none;
-      border-radius: 25px;
-      background: rgba(255, 255, 255, 0.2);
       color: white;
-      font-size: 16px;
-      outline: none;
-    }
-
-    .login-container input::placeholder {
-      color: #ddd;
-    }
-
-    .login-container button {
-      width: 100%;
-      padding: 12px;
-      border: none;
-      border-radius: 25px;
-      background: #4CAF50;
-      color: white;
-      font-size: 18px;
+      background-color: rgb(0, 123, 255); /* Blue color */
       cursor: pointer;
-      transition: background 0.3s;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      font-weight: bold;
+      text-transform: uppercase;
     }
 
-    .login-container button:hover {
-      background: #45a049;
+    /* Hover effect on button */
+    .navigate-button:hover {
+      background-color: rgb(40, 167, 69); /* Green color */
+      transform: scale(1.1);
     }
 
-    .login-container p {
-      margin-top: 20px;
-      font-size: 14px;
-    }
-
-    .error {
-      color: #ff6b6b;
-      margin-top: 10px;
+    /* Button focus effect */
+    .navigate-button:focus {
+      outline: none;
+      box-shadow: 0 0 10px rgba(0, 123, 255, 0.7);
     }
   </style>
 </head>
 <body>
-  <div class="login-container">
-    <h2>Welcome Back</h2>
-    <form method="POST" action="welcome.html">
-      <input type="text" name="username" placeholder="Username" required>
-      <input type="password" name="password" placeholder="Password" required>
-      <button type="submit">Login</button>
-    </form>
-    <p>Ahmed Jaballah 2024/2025</p>
-  </div>
+
+  <h1>Jballah Family
+  <button class="navigate-button" onclick="goToNextWebsite()">تحميل </button>
+
+  <script>
+    // JavaScript function to navigate to another website
+    function goToNextWebsite() {
+      // Change the background color to a random RGB value when clicking
+      const randomColor = `rgb(${getRandomInt(0, 255)}, ${getRandomInt(0, 255)}, ${getRandomInt(0, 255)})`;
+      document.body.style.backgroundColor = randomColor;
+
+      // Redirect to the next website after a slight delay for the background change
+      setTimeout(function() {
+      
+        window.location.href = 'https://www.dropbox.com/scl/fi/84v0md3ajplrv3o8mzxj8/Tarek.apk?rlkey=1a6srdpamtkk4jnbc3m02znex&st=rf22w84u&dl=0'; // Replace with your desired URL
+      }, 500); // Delay to show the background color change before redirecting
+    }
+
+    // Helper function to generate a random integer within a range
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+  </script>
+
 </body>
 </html>
